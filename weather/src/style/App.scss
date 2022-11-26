@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap');
+
+//vars
+$border-radius:1.5rem;
+$buity-fotn: 'Nerko One',
+cursive;
+$regilar-fotn: 'Roboto',
+sans-serif;
+
+@import "./NavBar/index";
+@import "./MainPage/index";
+
+body {
+    background: linear-gradient(55deg, rgba(33, 33, 33, 0.8), rgb(22, 22, 22));
+    background-color: rgb(33, 33, 33);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.err {
+    color: rgb(255, 209, 59);
+    font-weight: bold;
+    font-family: $regilar-fotn;
+}
+
+input,
+button {
+    outline: none;
+}

@@ -1,0 +1,60 @@
+.navBar {
+
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0fr;
+    padding-bottom: 1.5%;
+
+    &__form {
+        position: relative;
+        width: clamp(200px, 80%, 1400px);
+        display: grid;
+        grid-template-columns: 1fr 0fr;
+        padding-bottom: 1.5%;
+
+        @media screen and (min-width: 500px) {
+            margin: 0 auto;
+            width: clamp(200px, 50%, 1400px);
+        }
+
+        input {
+            padding: 0% 1.5%;
+            border-top-left-radius: 0.5em;
+            border-bottom-left-radius: 0.5em;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.733);
+            font-family: $buity-fotn;
+            font-size: 1.5rem;
+
+            &::placeholder {
+                color: rgb(31, 56, 197);
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    &__searchBtn {
+        border-top-right-radius: 0.5em;
+        border-bottom-right-radius: 0.5em;
+        background-color: rgba(255, 255, 255, 0.733);
+        border: none;
+    }
+
+    &__menuBtn {
+        background: none;
+        border: none;
+        position: absolute;
+        right: 0%;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.err {
+    width: 100%;
+    text-align: center;
+    grid-area: 2/1/3/3;
+}

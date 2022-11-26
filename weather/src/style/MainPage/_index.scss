@@ -1,0 +1,96 @@
+.weaterMain {
+    background-color: rgba(15, 15, 15, 0.561);
+    width: clamp(250px, 80%, 1400px);
+    height: 85vh;
+    margin: 10% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    border-radius: $border-radius;
+    color: white;
+    font-family: $regilar-fotn;
+    text-shadow: 0px 0px 10px black;
+
+    @media screen and (min-width: 500px) {
+        height: 75vh;
+        margin: 0 auto;
+    }
+}
+
+.weatherInfo {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: $border-radius;
+    display: grid;
+    grid-template-rows: 2fr 1.2fr;
+
+    &__bigWindow {
+        background-color: rgba(50, 50, 50, 0.7);
+        border-radius: $border-radius;
+        width: clamp(250px, 50%, 1440px);
+        margin: 2% auto;
+
+        &--desc {
+            font-family: $buity-fotn;
+            font-size: 2rem;
+            margin: 12% 0%;
+            text-align: center;
+
+            @media screen and (min-width: 500px) {
+                margin: 5% 0%;
+            }
+
+            &:first-letter {
+                text-transform: capitalize;
+            }
+        }
+
+        &--mainInfo {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            justify-items: center;
+
+            h2 {
+                grid-area: 1/1/2/4;
+            }
+
+            img {
+                width: 70%;
+
+                @media screen and (min-width: 70px) {
+                    width: 55%;
+                }
+            }
+        }
+
+        &--minmaxfillInfo {
+            margin: 0% auto;
+            display: flex;
+            justify-content: space-around;
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+
+    &__smallWindow {
+        background-color: rgba(33, 33, 33, 0.9);
+        border-radius: $border-radius;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-items: center;
+        width: clamp(250px, 30%, 1440px);
+        margin: 2% auto;
+
+        p {
+            text-align: center;
+        }
+    }
+}
