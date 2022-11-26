@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     (async () => {
       await axios
-        .get(
+        .post(
           `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=47d7b942ea7e702e4bdd7a72a9fc3f75`
         )
         .then(({ data }) => {
