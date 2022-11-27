@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function NavBar({ setCity, err, setErr, theme }) {
+function NavBar({ setCity, err, setErr, theme, setTheme }) {
   //vars
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -40,19 +40,41 @@ function NavBar({ setCity, err, setErr, theme }) {
     <>
       <nav className="navBar">
         {(toggleMenu || screenWidth > 500) && (
-          <form onSubmit={hendleGetCity} className="navBar__form">
-            <input
-              type="text"
-              name="city"
-              id="city"
-              placeholder="Enter city name"
-              required
-            />
-            <button type="submit" className="navBar__searchBtn">
-              <img src="./img/loupe.png" alt="loupe" />
-            </button>
-          </form>
+          <>
+            {/* Theme button */}
+            <div
+              className="themeBtn"
+              onClick={() => {
+                theme === "dark" ? setTheme("light") : setTheme("dark");
+              }}
+            >
+              <img
+                src={
+                  theme === "dark"
+                    ? "./img/theme-icons/moon.svg"
+                    : "./img/theme-icons/sun.svg"
+                }
+                alt={`theme is ${theme}`}
+              />
+            </div>
+
+            {/* form */}
+            <form onSubmit={hendleGetCity} className="navBar__form">
+              <input
+                type="text"
+                name="city"
+                id="city"
+                placeholder="Enter city name"
+                required
+              />
+              <button type="submit" className="navBar__searchBtn">
+                <img src="./img/loupe.png" alt="loupe" />
+              </button>
+            </form>
+          </>
         )}
+
+        {/* err alert */}
         <div
           className="err"
           style={{
@@ -62,6 +84,7 @@ function NavBar({ setCity, err, setErr, theme }) {
           {err}
         </div>
 
+        {/* menu button */}
         <button
           onClick={() => setToggleMenu(!toggleMenu)}
           style={{ display: screenWidth > 500 ? "none" : "block" }}

@@ -8,6 +8,8 @@
     padding: 2%;
     border-radius: $border-radius;
     font-family: $regilar-fotn;
+    // position: relative;
+    // top: 3vh;
 
     @media screen and (min-width: 500px) {
         height: 75vh;
@@ -22,6 +24,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: $border-radius;
+
     display: grid;
     grid-template-rows: 2fr 1.2fr;
 

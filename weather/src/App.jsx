@@ -43,21 +43,19 @@ function App() {
   console.log(data);
   return (
     <div>
-      <NavBar setCity={setCity} err={err} setErr={setErr} theme={theme} />
+      <NavBar
+        setCity={setCity}
+        err={err}
+        setErr={setErr}
+        theme={theme}
+        setTheme={setTheme}
+      />
 
       {data ? (
         <WeatherWindow weather={data} theme={theme} />
       ) : (
         <NoData theme={theme} />
       )}
-
-      <div
-        onClick={() => {
-          theme === "dark" ? setTheme("light") : setTheme("dark");
-        }}
-      >
-        Theme
-      </div>
     </div>
   );
 }
