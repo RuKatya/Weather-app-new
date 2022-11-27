@@ -1,8 +1,16 @@
 import React from "react";
 
-const BigWindowWeather = ({ weather }) => {
+const BigWindowWeather = ({ weather, theme }) => {
   return (
-    <div className="weatherInfo__bigWindow">
+    <div
+      className="weatherInfo__bigWindow"
+      style={{
+        backgroundColor:
+          theme === "dark"
+            ? "rgba(50, 50, 50, 0.7)"
+            : "rgba(210, 209, 209, 0.7)",
+      }}
+    >
       <h2 className="weatherInfo__bigWindow--desc">
         {weather.weather[0].description}
       </h2>

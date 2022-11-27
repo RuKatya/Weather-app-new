@@ -1,5 +1,4 @@
 .weaterMain {
-    background-color: rgba(15, 15, 15, 0.561);
     width: clamp(250px, 80%, 1400px);
     height: 85vh;
     margin: 10% auto;
@@ -8,9 +7,7 @@
     align-items: center;
     padding: 2%;
     border-radius: $border-radius;
-    color: white;
     font-family: $regilar-fotn;
-    text-shadow: 0px 0px 10px black;
 
     @media screen and (min-width: 500px) {
         height: 75vh;
@@ -29,7 +26,6 @@
     grid-template-rows: 2fr 1.2fr;
 
     &__bigWindow {
-        background-color: rgba(50, 50, 50, 0.7);
         border-radius: $border-radius;
         width: clamp(250px, 50%, 1440px);
         margin: 2% auto;
@@ -80,7 +76,6 @@
     }
 
     &__smallWindow {
-        background-color: rgba(33, 33, 33, 0.9);
         border-radius: $border-radius;
         display: grid;
         grid-template-columns: repeat(2, 1fr);

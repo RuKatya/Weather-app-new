@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function NavBar({ setCity, err, setErr }) {
+function NavBar({ setCity, err, setErr, theme }) {
   //vars
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -16,6 +16,7 @@ function NavBar({ setCity, err, setErr }) {
         const smallLettersCity = city.toLowerCase();
 
         setCity(smallLettersCity);
+        localStorage.setItem("weather-city", smallLettersCity);
       } else {
         setErr("Enter latin letters without digits");
         console.log(err);
@@ -52,7 +53,14 @@ function NavBar({ setCity, err, setErr }) {
             </button>
           </form>
         )}
-        <div className="err">{err}</div>
+        <div
+          className="err"
+          style={{
+            color: theme === "dark" ? "rgb(255, 209, 59)" : "rgb(59, 85, 255)",
+          }}
+        >
+          {err}
+        </div>
 
         <button
           onClick={() => setToggleMenu(!toggleMenu)}
