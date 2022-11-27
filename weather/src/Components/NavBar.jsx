@@ -29,7 +29,7 @@ function NavBar({ setCity, err, setErr, theme, setTheme }) {
   useEffect(() => {
     const changeWidth = () => {
       setScreenWidth(window.innerWidth);
-      setToggleMenu(false);
+
       setErr();
     };
 
