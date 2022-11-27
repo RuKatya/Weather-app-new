@@ -27,7 +27,7 @@ function App() {
     (async () => {
       try {
         const { data } = await axios.get(
-          `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=47d7b942ea7e702e4bdd7a72a9fc3f75`
+          `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=47d7b942ea7e702e4bdd7a72a9fc3f75`
         );
 
         return setData(data);

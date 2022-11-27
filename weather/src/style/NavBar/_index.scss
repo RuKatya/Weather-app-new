@@ -3,6 +3,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 1.5fr 7fr 1.5fr;
+    height: 5vh;
 
     &__form {
         display: flex;
