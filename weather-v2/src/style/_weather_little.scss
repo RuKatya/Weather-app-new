@@ -1,0 +1,15 @@
+.little-weather {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+
+    h4 {
+        grid-area: 1 / 1 / 2 / 3;
+        font-size: 1.1rem;
+    }
+
+    img {
+        grid-area: 2 / 1 / 4 / 2
+    }
+}

@@ -1,0 +1,9 @@
+$backGround_elements: #3B659E;
+$borderbox_elements: 20px;
+
+@mixin displayItem {
+    background-color: $backGround_elements;
+    border-radius: $borderbox_elements;
+    box-sizing: border-box;
+    padding: 1% 5%;
+}

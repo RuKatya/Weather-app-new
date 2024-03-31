@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wdth,wght,YTLC@0,6..12,75..125,200..1000,440..540;1,6..12,75..125,200..1000,440..540&display=swap');
+@import "./vars";
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+    background-color: #457DC6;
+}
+
+.main-weather {
+    background-color: #3E6EAC;
+    box-sizing: border-box;
+    padding: 5%;
+    border-radius: 20px;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        gap: 5%;
+
+        &--nextDays {
+            @include displayItem;
+            justify-content: space-between;
+            display: flex;
+            grid-area: 2 / 2 / 3 / 3;
+        }
+    }
+
+}
+
+@import "./weather-main";
+@import "./chart";
+@import "./weather_little";

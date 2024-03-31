@@ -42,7 +42,7 @@ interface IWind {
     speed: number
 }
 
-interface IListObject {
+export interface IListObject {
     clouds: Iclouds
     dt: number
     dt_txt: string
@@ -60,6 +60,10 @@ export interface IAllDataWeather {
     city: ICity
     message: number
     list: Array<IListObject>
+}
+
+export interface IWeatherLittle {
+    date: IListObject[]
 }
 
 
