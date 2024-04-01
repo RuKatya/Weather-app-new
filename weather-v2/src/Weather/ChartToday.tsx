@@ -1,5 +1,4 @@
 import { FC } from 'react'
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { defaults } from 'chart.js/auto';
 import { Line } from 'react-chartjs-2'
 import { todayTemp } from './weathercont';
@@ -13,7 +12,6 @@ defaults.plugins.legend.title.color = "white"
 defaults.color = "white"
 
 const ChartToday: FC = () => {
-    // console.log(todayTemp)
     return (
         <div className='chart-of-today'>
             <Line

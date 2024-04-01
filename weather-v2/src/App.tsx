@@ -5,7 +5,6 @@ import WeatherMain from './Weather/WeatherMain'
 import { nextDates } from './Weather/weathercont'
 
 function App() {
-  // console.log(nextDates)
   return (
     <main className='main-weather'>
       <SearchWeather />

@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { capitalCity, capitalDesc, sunrise, sunset, time, weather } from './weathercont'
+import { capitalCity, capitalDesc, sunrise, sunset, time, updateTime, weather } from './weathercont'
 import { getImageURL } from '../utils/image-util'
 
 const WeatherMain: FC = () => {
@@ -9,10 +9,10 @@ const WeatherMain: FC = () => {
                 <h4>Current Weather</h4>
                 <p>{time}</p>
                 <p>{capitalCity}</p>
-                <p>{weather.list[0].dt_txt}</p>
             </div>
             <div className='main-weather-window__current-weather'>
                 <img src={getImageURL(weather.list[0].weather[0].icon, "weater-icons")} alt={weather.list[0].weather[0].description} />
+                <p>last update: {updateTime}</p>
                 <p className='main-weather-window__current-weather--temp'>{weather.list[0].main.temp.toFixed(0)}&deg;</p>
                 <p className='main-weather-window__current-weather--desc'>{capitalDesc}</p>
                 <div className='main-weather-window__current-weather--more-info'>
