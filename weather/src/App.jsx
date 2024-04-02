@@ -6,6 +6,7 @@ import WeatherWindow from "./Components/WeatherWindow";
 import { getCity } from "./getCity";
 import { getTheme } from "./getTheme";
 import "./style/App.scss";
+import { your_api_key } from "./api_key";
 
 function App() {
   const [data, setData] = useState();
@@ -23,12 +24,11 @@ function App() {
         : "linear-gradient(55deg, rgba(255, 255, 255, 1) 30%, rgba(113, 113, 113, 1) 100%)";
   }, [theme, city]);
 
-  console.log(process.env.REACT_APP_KEY_API)
   useEffect(() => {
     (async () => {
       try {
         const { data } = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_KEY_API}`
+          `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${your_api_key}`
         );
 
         return setData(data);
