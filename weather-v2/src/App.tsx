@@ -48,7 +48,12 @@ function App() {
               ))}
             </div>
           </div>
-        </> : <h1>NO DATA</h1>}
+        </> : <h1>
+          NO DATA
+          <button onClick={() => {
+            localStorage.clear()
+          }}>Refresh</button>
+        </h1>}
         </>}
     </main>
   )
