@@ -99,7 +99,7 @@ The application's consistent improvements are being made.
 
 ### Weather Web App V.1 - Mobile
 <p align="center">
-<img src="./imagesReadMe/weather-old-mobile.JPG" alt="main page of desktop" style="width: 80%"/>
+<img src="./imagesReadMe/weather-old-mobile.JPG" alt="main page of desktop" style="width: 40%"/>
 </p>
 
 ### Weather Web App V.2 - Desktop
@@ -108,5 +108,5 @@ The application's consistent improvements are being made.
 </p>
 ### Weather Web App V.1 - Mobile
 <p align="center">
-<img src="./imagesReadMe/weather-new-mobile.JPG" alt="main page of desktop" style="width: 80%"/>
+<img src="./imagesReadMe/weather-new-mobile.JPG" alt="main page of desktop" style="width: 40%"/>
 </p>
