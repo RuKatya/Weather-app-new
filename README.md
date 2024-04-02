@@ -48,7 +48,7 @@ Install NPM packages
 
 Enter your API Key in App component enstead of `your_api_key`
 ```js
-    const { data } = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${your_api_key}`)
+    await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${your_api_key}`)
 ```
    
 ## Example
