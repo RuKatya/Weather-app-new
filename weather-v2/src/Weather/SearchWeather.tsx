@@ -45,24 +45,15 @@ const SearchWeather: FC<ISearchWeather> = ({ setCity }) => {
             className="searchInput"
             onSubmit={hendleGetCity}
         >
-            {/* <form className="searchInput" onSubmit={hendleGetCity}> */}
             {err.length > 0 ? <p>{err}</p> : null}
             <InputBase
                 sx={{ ml: 1, flex: 1, color: "white" }}
                 placeholder="Search City..."
                 name="searchCityInput"
-
-            // inputProps={{ 'aria-label': 'search google maps' }}
             />
             <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
                 <SearchIcon sx={{ color: "white" }} />
             </IconButton>
-
-            {/* <InputBase name="searchCityInput" sx={{ ml: 1, flex: 1 }} /> */}
-            {/* <SearchIcon /> */}
-            {/* <input type="text" name="searchCityInput" placeholder='Search City...' />
-            <button type='submit'>Serach</button> */}
-            {/* </form> */}
         </Paper>
     )
 }
