@@ -55,13 +55,17 @@ function App() {
               ))}
             </div>
           </div>
-        </> : <h1>
-          NO DATA
-          <button onClick={() => {
-            localStorage.clear()
-            window.location.reload();
-          }}>Refresh</button>
-        </h1>}
+        </> :
+          <div className='main-weather__loading'>
+            <h1>
+              NO DATA
+            </h1>
+            <button onClick={() => {
+              localStorage.clear()
+              window.location.reload();
+            }}>Refresh</button>
+          </div>
+        }
         </>}
     </main>
   )
