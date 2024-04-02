@@ -66,6 +66,19 @@ export interface IWeatherLittle {
     date: IListObject[]
 }
 
+export interface IChartToday {
+    weather: IAllDataWeather
+}
+
+export interface ISearchWeather {
+    // eslint-disable-next-line @typescript-eslint/ban-types
+    setCity: Function
+}
+
+export interface IWeatherMain {
+    weather: IAllDataWeather
+}
+
 
 
 

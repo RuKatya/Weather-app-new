@@ -7,35 +7,54 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
-    height: 100vh;
     font-family: "Nunito Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     color: white;
-    background-color: #457DC6;
+    background: rgb(121, 179, 255);
+    background: linear-gradient(0deg, rgba(121, 179, 255, 1) 0%, rgba(42, 94, 163, 1) 100%);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-size: cover;
 }
 
 .main-weather {
-    background-color: #3E6EAC;
     box-sizing: border-box;
     padding: 5%;
-    border-radius: 20px;
+    width: 35ch;
+    border-radius: $borderbox_elements;
+    margin: 5% auto;
+
+    &__loading {
+        height: 100vh;
+        display: flex;
+
+        // width: 10vw;
+        // background-color: #3E6EAC;
+    }
+
+    &__main {
+        background-color: #3E6EAC;
+    }
 
     &__grid {
-        display: grid;
-        grid-template-columns: 1fr 5fr;
-        gap: 5%;
+        // display: grid;
+        // grid-template-columns: 1fr 5fr;
+        // gap: 5%;
 
         &--nextDays {
             @include displayItem;
-            justify-content: space-between;
-            display: flex;
-            grid-area: 2 / 2 / 3 / 3;
+            @include widthItem;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            // justify-content: space-between;
+            // display: flex;
+            // grid-area: 2 / 2 / 3 / 3;
         }
     }
-
 }
 
+@import "./searchInpit";
 @import "./weather-main";
 @import "./chart";
 @import "./weather_little";
