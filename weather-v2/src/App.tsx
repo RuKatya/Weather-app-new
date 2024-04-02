@@ -59,6 +59,7 @@ function App() {
           NO DATA
           <button onClick={() => {
             localStorage.clear()
+            window.location.reload();
           }}>Refresh</button>
         </h1>}
         </>}
