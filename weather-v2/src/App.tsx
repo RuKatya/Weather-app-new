@@ -35,8 +35,15 @@ function App() {
   const nextDates = weather ? createVariables(weather) : []
 
   return (
-    <main className={`main-weather ${loading ? "main-weather__loading" : "main-weather__main"}`}>
-      {loading ? <CircularProgress color="inherit" />
+    <main className={`main-weather ${loading ?
+      "main-weather__loading"
+      :
+      "main-weather__main"
+      }`}>
+      {loading ? <>
+        <h2>Loading</h2>
+        <CircularProgress color="inherit" />
+      </>
         : <> {weather ? <>
           <SearchWeather setCity={setCity} />
           <div className='main-weather__grid'>

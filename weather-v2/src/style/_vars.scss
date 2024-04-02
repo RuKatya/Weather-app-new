@@ -1,6 +1,13 @@
 $backGround_elements: #3B659E;
 $borderbox_elements: 20px;
 
+$mobileWidth: 30ch;
+$tabletWidth: 55ch;
+$desctopWidth: 90ch;
+
+$breakPointTablet: 600px;
+$breakPointDesctop: 1200px;
+
 @mixin displayItem($backgroundColor: $backGround_elements, $borderRadius: $borderbox_elements) {
     background-color: $backgroundColor;
     border-radius: $borderRadius;

@@ -42,7 +42,8 @@ const SearchWeather: FC<ISearchWeather> = ({ setCity }) => {
                 backgroundColor: "rgba(54, 142, 205, 0.4)",
                 margin: "0 auto"
             }}
-            className="searchInput" onSubmit={hendleGetCity}
+            className="searchInput"
+            onSubmit={hendleGetCity}
         >
             {/* <form className="searchInput" onSubmit={hendleGetCity}> */}
             {err.length > 0 ? <p>{err}</p> : null}

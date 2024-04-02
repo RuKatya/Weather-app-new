@@ -7,9 +7,29 @@
         overflow-y: hidden;
         overflow-x: scroll;
 
+        @media screen and (min-width: $breakPointDesctop) {
+            overflow-x: hidden;
+        }
+
         &--bla {
             width: 70ch;
             height: 35vh;
+
+            @media screen and (min-width: $breakPointTablet) {
+                height: 28vh;
+            }
+
+            @media screen and (min-width: $breakPointDesctop) {
+                width: 85ch;
+            }
         }
+    }
+
+    @media screen and (min-width: $breakPointTablet) {
+        @include widthItem($widthItem: $tabletWidth);
+    }
+
+    @media screen and (min-width: $breakPointDesctop) {
+        @include widthItem($widthItem: $desctopWidth, $marginItem: 0);
     }
 }
