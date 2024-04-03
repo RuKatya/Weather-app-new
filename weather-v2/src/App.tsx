@@ -8,7 +8,7 @@ import ChartToday from './Weather/ChartToday'
 import { createVariables } from './Weather/weathercont'
 import WeatherLittle from './Weather/WeatherLittle'
 import CircularProgress from '@mui/material/CircularProgress';
-// import { your_api_key } from './api_key'
+import { your_api_key } from './api_key'
 
 function App() {
   const [weather, setWeather] = useState<IAllDataWeather>()
@@ -18,8 +18,8 @@ function App() {
   const getData = async (city: string) => {
     try {
       setLoading(true)
-      // const { data } = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${your_api_key}`)
-      const { data } = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=47d7b942ea7e702e4bdd7a72a9fc3f75`)
+      const { data } = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${your_api_key}`)
+      // const { data } = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=47d7b942ea7e702e4bdd7a72a9fc3f75`)
       console.log(data)
       return setWeather(data)
     } catch (error) {
